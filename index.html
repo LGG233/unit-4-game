@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystals Collector!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+    <div id="boxy-box" class="container">
+        <div class="row">
+            <h1 id="game-name">Crystals Collector!</h1>
+        </div>
+        <div class="container innertext">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 leftie">
+                    <p>You will be given a random number at the start of the game. </p>
+                    <p>There are four crystals below. By clicking a crystal you will add a specific amount of points
+                        to your total score.</p>
+                    <p>You win the game by matching your total score to the random number. You lose the game if
+                        your total score goes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>Each time when the game starts, the values of each crystal will change to a new random.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container innertext">
+            <div class="row">
+                <div class="col-lg-6"><span id="gamePoints"></span></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2 leftie">
+                    <div class="row"><span id="statusReport"></span></div>
+                    <div class="row">Wins: <span id="gamesWon"></span></div>
+                    <div class="row">Losses: <span id="gamesLost"></span></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container innertext">
+            <div class="row">
+                <div class="col-lg-3 leftie">
+                    <div id="redCrystal">
+                        <img class="crystal" id="redCry" src="assets/images/red.png" alt="Red Crystal">
+                    </div>
+                </div>
+                <div class="col-lg-3 leftie">
+                    <div id="purpleCrystal">
+                        <img class="crystal" id="purpleCry" src="assets/images/purple.png" alt="Purple Crystal">
+                    </div>
+                </div>
+                <div class="col-lg-3 leftie">
+                    <div id="orangeCrystal">
+                        <img class="crystal" id="orangeCry" src="assets/images/orange.png" alt="Orange Crystal">
+                    </div>
+                </div>
+                <div class="col-lg-3 leftie">
+                    <div id="pinkCrystal">
+                        <img class="crystal" id="pinkCry" src="assets/images/pink.png" alt="Pink Crystal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container innertext">
+            <div class="row">
+                <div class="col-lg-6 leftie">Your total is:</div>
+            </div>
+        </div>
+        <br>
+        <div class="container innertext">
+            <div class="row">
+                <div class="col-lg-6 leftie"><span id="totalScore"></span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
