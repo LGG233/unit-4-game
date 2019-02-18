@@ -1,35 +1,5 @@
-#game-name {
-    margin: 10px;
-    color: white;
-    float: left;
-    padding: 20px;
-    background: #4aaaa5;
-    text-align: center;
-  
-}
-
-#boxy-box {
-    float: left;
-    background-image: url(../images/white-waves.png);
-    background-color:blue;
-    color: red;
-}
-
-.leftie {
-    float: left;
-}
-
-.text-box {
-    background-color: white;
-}
-
 .crystal {
     height: 100px;
     width: 100px;
     opacity: 1;
-}
-
-.innertext {
-    width: 600px;
-
 }
