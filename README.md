@@ -18,8 +18,9 @@ I created eight separate functions to generate random numbers, assign values to 
 - - -
 
 # How to Play
-<ul>The object of the game is to match your score with the Points to Match provided at the start of each game.</ul>
-<ul>Clicking on each of the four crystals adds that crystal's value to your score. The values of the crystals are hidden, so you must determine their value to calculate a winning combination that gets you to the desired score.</ul>
-<ul>Your score must equal Points to Match exactly in order to win. Going over - even by a single point - is recorded as a loss.</ul>
-<ul>The game restarts automatically each time a win or a loss is recorded, generating new values for each crystal and a new number to match.</ul>
-<ul>Good luck!</ul>
+<ul>
+<li>The object of the game is to match your score with the Points to Match provided at the start of each game.</li>
+<li>Clicking on each of the four crystals adds that crystal's value to your score. The values of the crystals are hidden, so you must determine their value to calculate a winning combination that gets you to the desired score.</li>
+<li>Your score must equal Points to Match exactly in order to win. Going over - even by a single point - is recorded as a loss.</li>
+<li>The game restarts automatically each time a win or a loss is recorded, generating new values for each crystal and a new number to match.</li>
+<li>Good luck!</li></ul>
