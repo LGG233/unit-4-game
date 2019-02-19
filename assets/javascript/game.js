@@ -9,15 +9,14 @@ var purpleCrystal = 0;
 var pinkCrystal = 0;
 
 $(document).ready(function () {
-  $("#totalScore").text(totalScore);
-  $("#gamesWon").text(gamesWon);
-  $("#gamesLost").text(gamesLost);
+  $("#totalScore").text(totalScore); 
+  $("#gamesWon").text(gamesWon); 
+  $("#gamesLost").text(gamesLost); 
   $("#statusReport").html("<h2>Here we go!</h2>");
   pointsToMatch();
   rollDice();
   assignPoints();
-  scoreBoard();
-
+  
   function randomNumber(min = 1, max = 12) {
     return Math.floor(Math.random() * max) + min;
   }
@@ -34,10 +33,11 @@ $(document).ready(function () {
     purpleCrystal = 0;
     pinkCrystal = 0;
     $("#totalScore").text(totalScore);
-    $("#statusReport").html("<h2>Here we go!</h2>");
+    $("#statusReport").html("<h2>New game starting soon...</h2>");
+    setTimeout(playAlert, 1000);
     pointsToMatch();
     rollDice();
-    scoring();
+    assignPoints();
   };
 
   function pointsToMatch() {
@@ -48,12 +48,12 @@ $(document).ready(function () {
 
   function rollDice() {
     redCrystal = randomNumber();
-    orangeCrystal = randomNumber();
     purpleCrystal = randomNumber();
+    orangeCrystal = randomNumber();
     pinkCrystal = randomNumber();
     console.log("Red is: " + redCrystal);
-    console.log("Orange is: " + orangeCrystal);
     console.log("Purple is: " + purpleCrystal);
+    console.log("Orange is: " + orangeCrystal);
     console.log("Pink is: " + pinkCrystal);
   };
 
@@ -98,8 +98,8 @@ $(document).ready(function () {
     }
   }
 
-  function scoring() {
-    assignPoints();
-    scoreBoard();
+  function playAlert () {
+    $("#statusReport").html("<h2>Play!</h2>")
   }
+
 })

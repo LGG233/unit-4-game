@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -19,19 +18,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-4">
-                <h1>How to play</h1>
-                <p>You will be given a random number at the start of the game. </p>
-                <p>There are four crystals. By clicking a crystal you will add a specific amount of points
-                    to your total score.</p>
-                <p>You win the game by matching your total score to the random number. You lose the game if
-                    your total score goes above the random number.</p>
-                <p>The value of each crystal is hidden from you until you click on it.</p>
-                <p>Each time the game restarts, the values of each crystal will change to a new random.
-                </p>
+                <h1>How to Play</h1>
+                <p>The object of the game is to match your score with the Points to Match provided at the start of each game.</p>
+                <p>Clicking on each of the four crystals adds that crystal's value to your score. The values of the crystals are hidden, so you 
+                    must determine their value to calculate a winning combination that gets you to the desired score. </p>
+                <p>Your score must equal Points to Match exactly in order to win. Going over - even by a single point - is recorded as a loss.</p>
+                <p>The game restarts automatically each time a win or a loss is recorded, generating new values for each crystal and a new number to match.</p>
+                <p>Good luck!</p>
             </div>
             <div class="col-lg-2 col-md-2"></div>
             <div class="col-lg-5 col-md-4">
-                <h1>Points to match: <span id="gamePoints"></h1></span>
+                <h1>Points to Match: <span id="gamePoints"></h1></span>
                 <br>
                 <p><span id="statusReport"></span></p>
                 <br>
@@ -51,6 +48,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
