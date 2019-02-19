@@ -9,19 +9,50 @@ var purpleCrystal = 0;
 var pinkCrystal = 0;
 
 $(document).ready(function () {
-  $("#totalScore").text(totalScore); 
-  $("#gamesWon").text(gamesWon); 
-  $("#gamesLost").text(gamesLost); 
-  $("#statusReport").html("<h2>Here we go!</h2>");
-  pointsToMatch();
-  rollDice();
-  assignPoints();
-  
+  loadText();
+  $("#redCry").click(function () {
+    this.value = redCrystal;
+    totalScore = totalScore + redCrystal;
+    $("#totalScore").text(totalScore);
+    scoreBoard();
+  });
+  $("#orangeCry").click(function () {
+    this.value = orangeCrystal;
+    totalScore = totalScore + orangeCrystal;
+    $("#totalScore").text(totalScore);
+    scoreBoard();
+  });
+  $("#purpleCry").click(function () {
+    this.value = purpleCrystal;
+    totalScore = totalScore + purpleCrystal;
+    $("#totalScore").text(totalScore);
+    scoreBoard();
+  });
+  $("#pinkCry").click(function () {
+    this.value = pinkCrystal;
+    totalScore = totalScore + pinkCrystal;
+    $("#totalScore").text(totalScore);
+    scoreBoard();
+  });
+  runGame();
+
+  function loadText() {
+    $("#totalScore").text(totalScore);
+    $("#gamesWon").text(gamesWon);
+    $("#gamesLost").text(gamesLost);
+    $("#statusReport").html("<h2>Here we go!</h2>");
+  }
+
+  function runGame() {
+    pointsToMatch();
+    rollDice();
+  }
+
   function randomNumber(min = 1, max = 12) {
     return Math.floor(Math.random() * max) + min;
   }
 
-  function delayedReset () {
+  function delayedReset() {
     setTimeout(resetGame, 3000);
   }
 
@@ -35,9 +66,7 @@ $(document).ready(function () {
     $("#totalScore").text(totalScore);
     $("#statusReport").html("<h2>New game starting soon...</h2>");
     setTimeout(playAlert, 1000);
-    pointsToMatch();
-    rollDice();
-    assignPoints();
+    runGame();
   };
 
   function pointsToMatch() {
@@ -57,33 +86,6 @@ $(document).ready(function () {
     console.log("Pink is: " + pinkCrystal);
   };
 
-  function assignPoints() {
-    $("#redCry").click(function() {
-      this.value = redCrystal;
-      totalScore = totalScore + redCrystal;
-      $("#totalScore").text(totalScore);
-      scoreBoard();
-    });
-    $("#orangeCry").click(function() {
-      this.value = orangeCrystal;
-      totalScore = totalScore + orangeCrystal;
-      $("#totalScore").text(totalScore);
-      scoreBoard();
-    });
-    $("#purpleCry").click(function() {
-      this.value = purpleCrystal;
-      totalScore = totalScore + purpleCrystal;
-      $("#totalScore").text(totalScore);
-      scoreBoard();
-    });
-    $("#pinkCry").click(function() {
-      this.value = pinkCrystal;
-      totalScore = totalScore + pinkCrystal;
-      $("#totalScore").text(totalScore);
-      scoreBoard();
-    });
-  };
-
   function scoreBoard() {
     if (totalScore === gamePoints) {
       gamesWon = gamesWon + 1;
@@ -98,7 +100,7 @@ $(document).ready(function () {
     }
   }
 
-  function playAlert () {
+  function playAlert() {
     $("#statusReport").html("<h2>Play!</h2>")
   }
 
