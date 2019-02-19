@@ -59,10 +59,6 @@ $(document).ready(function () {
   function resetGame() {
     totalScore = 0;
     gamePoints = 0;
-    redCrystal = 0;
-    orangeCrystal = 0;
-    purpleCrystal = 0;
-    pinkCrystal = 0;
     $("#totalScore").text(totalScore);
     $("#statusReport").html("<h2>New game starting soon...</h2>");
     setTimeout(playAlert, 1000);
@@ -89,12 +85,22 @@ $(document).ready(function () {
   function scoreBoard() {
     if (totalScore === gamePoints) {
       gamesWon = gamesWon + 1;
+      totalScore = 0;
+      redCrystal = 0;
+      orangeCrystal = 0;
+      purpleCrystal = 0;
+      pinkCrystal = 0;
       $("#statusReport").html("<h2>Yippee! You won!</h2>");
       $("#gamesWon").text(gamesWon);
       delayedReset();
     } else if (totalScore > gamePoints) {
       gamesLost = gamesLost + 1;
-      $("#statusReport").html("<h2>Nice try but you lose</h2>");
+      totalScore = 0;
+      redCrystal = 0;
+      orangeCrystal = 0;
+      purpleCrystal = 0;
+      pinkCrystal = 0;
+        $("#statusReport").html("<h2>Nice try but you lose</h2>");
       $("#gamesLost").text(gamesLost);
       delayedReset();
     }
